@@ -1,0 +1,90 @@
+<h1>Evaluation</h1> 
+
+<p>During the <strong>development phase</strong>,
+the participants must submit code to predict the next 7 frames (days) of the
+data sequence, given past frames. We compute the average
+<strong>MSE</strong> (root mean square error) over all predictions
+made for each frame, averaged over all predicted
+frames. The average is taken only over designated variables.</p> 
+
+<h1>Instructions</h1> 
+
+<p>To make entries, go
+to the "Participate" tab. You must be a Codalab user to participate and
+you must accept the Terms and Conditions of the challenge and the rules. The rules include all instructions found in this website.</p> 
+
+<p>Under
+the "Participate" tab, you will be able to download "public" data
+to familiarize yourself with the task, a starting kit, including a sample
+submission. The interface must be respected to create successful submissions.
+The class to be modified is called "model.py". 
+Code execution time is limited on Codalab to <b>ten minutes</b> for the whole
+dataset (N steps, each step corresponding to predicting the next 7 frames) in both phases.
+
+<p>To create a submission, just zip the script "model.py" together with the metadata file
+(which indicates that you are making a code submission). IMPORTANT: zip code without directories.</p> 
+
+
+<p> There are 2 phases:</p> 
+
+<ul> <li><strong>Phase 1: Development phase. </strong> 
+Your code received on our server will see in the input directory several subdirectories:
+<pre>
+training/
+evaluation/
+</pre>
+The data in training/training0.csv and training/training1.csv etc. can be used for training. The data
+in evaluation/evaluation0.csv, evaluation/evaluation1.csv etc. will be used for adaptation and testing. 
+The script ingestion.py will run your code. It will make the training data and part of the evaluation data
+available to your both your "train" and "predict" methods, progressively. Your predict method will have to forecast
+the next 7 frames.
+<br>
+Let us call X matrix concatenating the training and evaluation data ordered by time index.
+The expected sequence of training data and predictions will be:
+<pre>
+time step : frames provided   frames predicted
+1	
+.
+.
+.
+Ntr         1:Ntr             Ntr+1:Ntr+7 
+Ntr+1		1:Ntr+1 		  Ntr+2:Ntr+8
+Ntr+2
+Ntr+3
+.
+.
+.
+Ntr+Neval-2 1:Ntr+Neval-2     Ntr+Neval-1:Ntr+Neval
+Ntr+Neval-1 1:Ntr+Neval-1     Ntr+Neval 
+</pre>
+
+<br> 
+<br>The performance of your LAST code submission you make will be displayed on the
+leaderboard.</li> 
+
+<li><strong>Phase 2: Final evaluation phase.</strong> The setting will be similar.
+
+Your last submission of phase 1 will be
+automatically forwarded, so you do not need to do anything. However, if you wish, you may also make ONE submission during the final evaluation phase.
+But beware, this is a blind test. You will not get any feedback. If your submitted code fails, you will not get another chance.
+Your code will see the following subdirectories:
+<pre>
+training/
+		training0.csv
+		training1.csv
+		training2.csv
+		etc.
+evaluation/
+		evaluation0.csv
+		evaluation1.csv
+		etc.
+</pre>
+Similarly to the previous phase, data in the training/ sub-directories is for training and data in 
+the evaluation/ directory for adaptation and testing.
+ Your performance on the test set will appear on
+the leaderboard when the organizers finish checking the
+submissions.</li> </ul>
+
+
+<p>This challenge is brought to you
+by <a href="mailto:organizers@company.com">the organizers</a>.</p>

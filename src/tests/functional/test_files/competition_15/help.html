@@ -1,0 +1,226 @@
+<h1>Help</h1>
+<a name="help"></a>
+
+<h3>
+Are there prerequisites to enter the challenge?
+</h3>
+<p>No, except accepting the TERMS AND CONDITIONS.
+
+<h3>
+Can I enter any time?
+</h3>
+<p>You can enter during the development phase only. Registration closes at the end of the development phase.
+
+<h3>
+Where can I download the data?
+</h3>
+<p> From the "Data" page, under the "Participate" tab. You first need to register and accept the TERMS AND CONDITIONS.
+
+<h3>
+How do I make submissions?
+</h3>
+Register and go to  the "Participate" tab where you find data, and a submission form. 
+
+<h3>
+Do you provide tips on how to get started?
+</h3>
+<p>We provide a Starting Kit in Python with step-by-step instructions in a Jupyter notebook.
+We also provide some tutorial material and fact sheets on benchmark methods.
+
+<h3>
+Are there prizes?
+</h3>
+<p>The prizes will be determined by the IdF.
+
+<h3>
+Do I need to submit code to participate?
+</h3>
+<p>Yes, participation is by code submission.
+
+<h3>
+When I submit code, do I surrender all rights to that code to the SPONSORS or ORGANIZERS?
+</h3>
+<p> No. You just grant to the ORGANIZERS a license to use your code for evaluation purposes during the challenge. You retain all other rights. 
+
+<h3>
+If I win, I must submit a fact sheet, do you have a template?
+</h3>
+<p> Yes, please download it [HERE].
+
+
+<h3>
+How much computational power and memory are available?
+</h3>
+You are sharing resources with other users on X servers with the following specifications:
+<table class="tg">
+  <tr>
+    <th>Component</th>
+    <th>Number</th>
+    <th>Type</th>
+    <th>Total cores</th>
+  </tr>
+  <tr>
+    <td>CPU</td>
+    <td>xxx</td>
+    <td>xxx</td>
+    <td>xxx</td>
+  </tr>
+  <tr>
+    <td>RAM</td>
+    <td>xxx </td>
+    <td>xxx</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>GPU</td>
+    <td>xxx</td>
+    <td>xxx</td>
+    <td>xxx</td>
+  </tr>
+</table>
+
+The PARTICIPANTS will be informed if the computational resources increase. They will NOT decrease.
+
+<h3>
+Can I pre-train a model on my local machine and submit it?
+</h3>
+<p> This is not explicitly forbidden, but it is discouraged. We prefer if all calculations are performed on the server. If you submit a pre-trained model, you will have to disclose it in the fact sheets. All data "past" will be available to your program on the server. See the "Data" page for details.
+
+<h3>
+Do I have to re-submit my code in the final validation round?
+</h3>
+<p> No. Submissions of the development phase will be forwarded automatically to the last round. However, you will have 3 days in the final phase to make one final submission if you wish, which will overwrite the last submission you made in the development phase.
+During that time, no feedback will be provided on the leaderboard. The results on final evaluation data will only be revealed once the jury has deliberated, and at the latest on the day of the workshop.
+
+<h3>
+What is my time budget?
+</h3>
+<p>Your execution must run in less than 10 minutes (600 seconds) in the development phase and 20 minutes (1200 seconds) in the final evaluation phase. 
+<h3>
+Does the time budget correspond to wall time or CPU/GPU time?
+</h3>
+<p>CPU/GPU time.
+
+<h3>
+My submission seems stuck, how long will it run?
+</h3>
+<p>In principle no more than its time budget. We kill the process if the time budget is exceeded. 
+Submissions are queued and run on a first time first serve basis. 
+We are using several identical servers. <a href="mailto:organizers@company.com">Contact us</a> if your submission is stuck more than 24 hours. Check on the leaderboard the execution time.
+
+<h3>
+How many submissions can I make?
+</h3>
+<p>Five per day during the feedback phase (and up to a total of 100). Only ONE during the final validation phase. Please respect other users. It is forbidden to register under multiple user IDs to gain an advantage and make more submissions. Violators will be DISQUALIFIED FROM THE CONTEST. 
+
+<h3>
+Do my failed submissions count towards my number of submissions per day?
+</h3>
+<p>No. Please  <a href="mailto:organizers@company.com">contact us</a> if you think the failure is due to the platform rather than to your code and we will try to resolve the problem promptly.
+
+<h3>
+If I under-use my time budget in one phase, can I use it later?
+</h3>
+<p>No. 
+
+<h3>
+What happens if I exceed my time budget?
+</h3>
+<p>Your submission does not get scored. The process gets killed.
+
+
+<h3>
+The time budget is too small, can you increase it?
+</h3>
+<p> We may eventually increase it if the burden on our servers is no too high and we see that this is required to beat baseline results. But do not count on it.
+
+
+<h3>
+Why are you using MSE as a metric?
+</h3>
+<p> Because of simplicity. Everyone understands MSE. We are aware that this may not be the best metric for the task. Other metrics will be computed. However the PARTICIPANTS will be ranked with MSE to determine the winners.
+
+<h3>
+Which version of Python are you using?
+</h3>
+<p> The code was tested under Anaconda Python 3.6. We are running Python 3.6 on the server and the same libraries are available.
+
+<h3>
+Can I use something else than Python code?
+</h3>
+<p>Yes. Any Linux executable can run on the system, provided that it fulfills our Python interface 
+
+<h3>
+How do I test my code in the same environment that you are using before submitting?
+</h3>
+<p> When you submit code to Codalab, your code is executed inside a docker container. This environment can be exactly reproduced on your local machine by downloading the corresponding docker image.
+The docker environment of the challenge contains Anaconda libraries. <br>
+Non GPU users, if you are new to docker, <a href=" ">follow these instructions to install docker.</a>
+GPU users, follow these <a href=" ">more detailed instructions</a>.
+
+<h3>
+Are there publication opportunities?
+</h3>
+<p>No, except for presenting at the workshop.
+
+
+<h3>
+What is meant by "Leaderboard modifying disallowed"?
+</h3>
+Your last submission is shown automatically on the leaderboard. You cannot choose which submission to select.
+If you want another submission than the last one you submitted to "count" and be displayed on the leaderboard, you need to re-submit it.
+
+<h3>
+Can I register multiple times? 
+</h3>
+No. If you accidentally register multiple times or have multiple accounts from members of the same team, please notify the ORGANIZERS. Teams or solo PARTICIPANTS with multiple accounts will be disqualified.
+
+<h3>
+How can I create a team? 
+</h3>
+We have disabled Codalab team registration. To join as a team, just share one account with your team. The team leader is responsible for making submissions and observing the rules.
+
+<h3>
+How can I destroy a team? 
+</h3>
+You cannot. If you need to destroy your team, <a href="mailto:organizers@company.com">contact us</a>.
+
+<h3>
+Can I join or leave a team? 
+</h3>
+It is up to you and the team leader to make arrangements. However, you cannot participate in multiple teams.
+
+<h3>
+Can cheat by trying to get a hold of the evaluation data and/or future frames while my code is running? 
+</h3>
+No. If we discover that you are trying to cheat in this way you will be disqualified. All your actions are logged and your code will be examined if you win.
+
+
+<h3>
+Can I give an arbitrary hard time to the ORGANIZERS? 
+</h3>
+ALL INFORMATION, SOFTWARE, DOCUMENTATION, AND DATA ARE PROVIDED "AS-IS". 
+UPSUD, CHALEARN, IDF, AND/OR OTHER ORGANIZERS AND SPONSORS DISCLAIM 
+ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES 
+OF MERCHANTABILITY AND FITNESS FOR ANY PARTICULAR PURPOSE, AND THE WARRANTY OF NON-INFRIGEMENT 
+OF ANY THIRD PARTY'S INTELLECTUAL PROPERTY RIGHTS. IN NO EVENT SHALL ISABELLE GUYON AND/OR OTHER 
+ORGANIZERS BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER 
+ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF SOFTWARE, DOCUMENTS, MATERIALS, 
+PUBLICATIONS, OR INFORMATION MADE AVAILABLE FOR THE CHALLENGE. 
+In case of dispute or possible exclusion/disqualification from the competition, the PARTICIPANTS agree 
+not to take immediate legal action against the ORGANIZERS or SPONSORS. Decisions can be appealed by submitting 
+a letter to the EXPERT PANEL chair person, 
+and disputes will be resolved by the EXPERT PANEL. <br>
+The EXPERT PANEL chair person is: <br>
+<pre>
+ADD COORDINATES
+</pre>
+
+<h3>
+Where can I get additional help? 
+</h3>
+For questions of general interest, THE PARTICIPANTS should post their questions to the forum.
+
+<p>This challenge is brought to you
+by <a href="mailto:organizers@company.com">the organizers</a>.</p>
+

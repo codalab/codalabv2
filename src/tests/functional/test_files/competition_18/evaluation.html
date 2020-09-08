@@ -1,0 +1,81 @@
+<h2>Quick start</h2>
+<h3>Baseline, Starting kit, Practice datasets can be downloaded here:</h3>
+<ul>
+<li><strong>Baidu Wangpan:</strong>
+<ul>
+<li><span style="text-decoration: line-through;"><a href="https://pan.baidu.com/s/1dOTpJ8Ju2dJvAtvFG69ehw">https://pan.baidu.com/s/1dOTpJ8Ju2dJvAtvFG69ehw&nbsp;&nbsp;</a>password:&nbsp;cdg9</span>&nbsp;</li>
+<li><a href="https://pan.baidu.com/s/1qPxK4V8W6fNd3STcS-crCw">https://pan.baidu.com/s/1qPxK4V8W6fNd3STcS-crCw&nbsp;</a>&nbsp;password:&nbsp;g92i</li>
+</ul>
+</li>
+<li><strong>Google Drive:</strong>&nbsp;&nbsp;<br />
+<ul>
+<li><a href="https://drive.google.com/drive/folders/1A54BxDhR0tou1qdh9Hry_aog1SlaCeI-?usp=sharing">https://drive.google.com/drive/folders/1A54BxDhR0tou1qdh9Hry_aog1SlaCeI-?usp=sharing</a> （UPDATED)</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Baseline</h3>
+<p>This is a challenge with code submission. We provide one baseline above for test purposes.</p>
+<p>To make a test submission, download the starting kit and follow the readme.md file instruction. click on the blue button "<strong>Upload a Submission</strong>" in the upper right corner of the page and re-upload it.&nbsp;You must click first the orange tab&nbsp;<strong>"Feedback Phase"</strong>&nbsp;if you want to make a submission simultaneously on all datasets and get ranked in the challenge. You may also submit on a single dataset at a time (for debug purposes). To check progress on your submissions goes to the "<strong>My Submissions</strong>" tab. Your best submission is shown on the leaderboard visible under the "<strong>Results</strong>" tab.</p>
+<h3>Starting kit</h3>
+<p>The starting kit contains everything you need to create <strong>your own code submission</strong>&nbsp;(just by modifying the file model.py) and to test it on your local computer, with the same handling programs and Docker image as those of the Codalab platform (but the hardware environment is in general different).&nbsp;</p>
+<center>
+<p style="text-align: left;">The starting kit&nbsp;contains toy sample data. Besides that, 3 practice datasets are also provided&nbsp;so that you can develop your AutoWSL solutions offline. These&nbsp;3 <strong>practice datasets</strong> can be downloaded from the link at the beginning.</p>
+<h3 style="text-align: left;">Local development and testing:</h3>
+<p style="text-align: left;">You can test your code in the exact same environment as the Codalab environment using&nbsp;docker. You are able to run the&nbsp;<strong>ingestion</strong>&nbsp;program (to produce predictions) and the&nbsp;<strong>scoring</strong>&nbsp;program (to evaluate your predictions) on toy sample data.</p>
+<p style="text-align: left;">1. If you are new to docker, install docker from https://docs.docker.com/get-started/.</p>
+<p style="text-align: left;">2. At the shell, change to the starting-kit directory, run</p>
+<p style="text-align: left;"><strong>&nbsp;docker run -it -v "$(pwd):/app/codalab"&nbsp;vergilgxw/autotable:v2</strong></p>
+<p style="text-align: left;">3. Now&nbsp;you&nbsp;are in the bash of the docker container, run the local test program</p>
+<p style="text-align: left;"><strong>&nbsp; python run_local_test.py --dataset_dir=[path_to_dataset] --code_dir=[path_to_model_file]</strong></p>
+<p style="text-align: left;">It runs ingestion and scoring program simultaneously, and the predictions and scoring results are in sample_result_submissions and scoring_output directory.&nbsp;</p>
+<h2 style="text-align: left;">Submission</h2>
+<h3 style="text-align: left;">Interface</h3>
+<p style="text-align: left;">The interface is simple and generic: you must supply a Python <strong>model.py, </strong>where<strong>&nbsp;a<span class="Apple-converted-space">&nbsp;</span><strong>Model</strong><span class="Apple-converted-space">&nbsp;</span>class </strong>is defined with:</p>
+<ul style="text-align: left;">
+<li>a constructor</li>
+<li>a <strong>train</strong> method</li>
+<li>a <strong>predict</strong> method</li>
+<li>a <strong>save</strong> method</li>
+<li>a <strong>load</strong> method</li>
+</ul>
+<p style="text-align: left;">The python version on our platform is&nbsp;<strong>3.6.9</strong>.&nbsp;Below we define the interface of Model class in detail.</p>
+<p style="text-align: left;"><strong>__init__(self, info):</strong></p>
+<ul>
+<li style="text-align: left;"><strong>info</strong>:&nbsp;a python dictionary contains the meta information about the dataset,&nbsp;described in "<strong>Get Started - Dataset</strong>" page.&nbsp;</li>
+</ul>
+<p style="text-align: left;"><strong><strong>train(self, X_train, y, time_remain):</strong></strong></p>
+<ul>
+<li style="text-align: left;"><strong>X_train</strong>: a dataframe, input tabular data.</li>
+<li style="text-align: left;"><strong>y</strong>:&nbsp;the label of the training data in integer format, 1:positive, -1:negative, 0:unlabeled</li>
+<li style="text-align: left;"><strong>time_remain</strong>:&nbsp;a scalar that indicates the remaining time (sec) for the submission process.</li>
+</ul>
+<p style="text-align: left;"><strong><strong><strong>predict(self, X_test, time_remain):</strong></strong>&nbsp;&nbsp;</strong></p>
+<ul>
+<li style="text-align: left;"><strong>X_test</strong>: a dataframe, input tabular data.</li>
+<li style="text-align: left;"><strong>time_remain</strong>: a scalar that indicates the remaining time (sec) for the submission process.</li>
+</ul>
+<p style="text-align: left;"><strong>save(self, directory):</strong></p>
+<ul>
+<li style="text-align: left;"><strong>directory</strong>: directory path to store model</li>
+</ul>
+<p style="text-align: left;"><strong>load(self, directory):</strong></p>
+<ul>
+<li style="text-align: left;"><strong>directory</strong>:&nbsp;directory path to restore model</li>
+</ul>
+<p style="text-align: left;">To make submissions,&nbsp;<strong>zip model.py </strong>and<strong> its dependency files (without the directory)</strong>, then use the "<strong>Upload a Submission</strong>" button. Please note that you must click first the orange tab&nbsp;<strong>"Feedback Phase / Final Phase"</strong>&nbsp;if you want to make a submission simultaneously on all datasets and get ranked in the challenge. You may also submit on a single dataset at a time (for debug purposes). Besides that, the ranking in the public leaderboard is determined by the <strong>LAST code submission</strong> of the participants.</p>
+</center>
+<h3>Computational limitations</h3>
+<ul>
+<li>A submission on one dataset is limited to certain time budgets, which can be read from the info.json file of dataset. 'time_budget' is time budget for training and 'pred_time_budget' is time budget for testing.</li>
+<li>Participants are limited to 5 submissions per day per dataset. However, we do not encourage to make&nbsp;a submission on a single dataset at a time, and the submission&nbsp;on all datasets will be failed if the number of submissions of one dataset is&nbsp;exhausted.</li>
+</ul>
+<h3>Running Environment</h3>
+<p>In the starting-kit, we provide a docker that simulates the running environment of our challenge platform. Participants can check the python version and installed python packages with the following commands:</p>
+<p>&nbsp;<strong>python --version</strong></p>
+<p><strong>&nbsp;pip list</strong></p>
+<p>On our platform, for each submission, the allocated computational resources are:</p>
+<ul>
+<li>CPU: 4 Cores</li>
+<li>Memory: 16 GB</li>
+</ul>

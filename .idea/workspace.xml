@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="346220c9-b454-4ad3-9081-3b1a5e7c27d4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/example_scripts/example_submission.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/example_scripts/example_submission.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/example_scripts/get_competition_details.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/example_scripts/get_competition_details.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/example_scripts/get_submission_details.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/example_scripts/get_submission_details.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="465-frontend-for-leaderboard" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1fZ4BcwNM8p7Yyu1ZfyrRjs0iDD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunManager">
+    <configuration name="pytest for tests.functional.test_submissions.TestSubmissions.test_v18_submission_end_to_end" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="competitions-v2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.functional.test_submissions.TestSubmissions.test_v18_submission_end_to_end&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest for tests.functional.test_submissions.TestSubmissions.test_v18_submission_end_to_end" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="346220c9-b454-4ad3-9081-3b1a5e7c27d4" name="Default Changelist" comment="" />
+      <created>1596412146354</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596412146354</updated>
+      <workItem from="1596412149851" duration="7701000" />
+      <workItem from="1596425796260" duration="1593000" />
+      <workItem from="1596432289216" duration="8608000" />
+      <workItem from="1596551958894" duration="410000" />
+      <workItem from="1596687526246" duration="55000" />
+      <workItem from="1596687612904" duration="21000" />
+      <workItem from="1597129728458" duration="850000" />
+      <workItem from="1597204095583" duration="2612000" />
+      <workItem from="1597284841747" duration="722000" />
+      <workItem from="1597330176604" duration="1179000" />
+      <workItem from="1597378873612" duration="667000" />
+      <workItem from="1597806557569" duration="254000" />
+      <workItem from="1597977016619" duration="6013000" />
+      <workItem from="1597991948397" duration="343000" />
+      <workItem from="1598322393117" duration="202000" />
+      <workItem from="1598322799717" duration="93000" />
+      <workItem from="1598406545551" duration="161000" />
+      <workItem from="1598406801404" duration="1318000" />
+      <workItem from="1598419674982" duration="35000" />
+      <workItem from="1598420523442" duration="26000" />
+      <workItem from="1598435464465" duration="376000" />
+      <workItem from="1598442276435" duration="470000" />
+      <workItem from="1598442886697" duration="796000" />
+      <workItem from="1598486016643" duration="2494000" />
+      <workItem from="1598491668357" duration="202000" />
+      <workItem from="1598844940006" duration="1846000" />
+      <workItem from="1598918943372" duration="9000" />
+      <workItem from="1598942980988" duration="11000" />
+      <workItem from="1598947631788" duration="701000" />
+      <workItem from="1598949548469" duration="1597000" />
+      <workItem from="1599008807389" duration="14000" />
+      <workItem from="1599126313973" duration="572000" />
+      <workItem from="1599136488012" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="554" y="241" width="1157" height="897" key="SettingsEditor" timestamp="1597982351189">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state x="694" y="264" width="1125" height="897" key="SettingsEditor/-1080.0.1080.1920/0.0.2560.1440@0.0.2560.1440" timestamp="1596552026102" />
+    <state x="528" y="204" key="SettingsEditor/-1080.23.1080.1897/0.23.2491.1417@0.23.2491.1417" timestamp="1597330202136" />
+    <state x="554" y="241" width="1157" height="897" key="SettingsEditor/-1920.84.1920.1057/0.23.2560.1337/2560.162.1680.1027@0.23.2560.1337" timestamp="1597982351189" />
+    <state x="562" y="191" width="1632" height="1132" key="find.popup" timestamp="1598949555734">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="563" y="210" width="1632" height="943" key="find.popup/-1000.23.1000.1897/0.23.2560.1417/2560.319.1680.1027@0.23.2560.1417" timestamp="1598419708350" />
+    <state x="562" y="191" width="1632" height="1132" key="find.popup/-1080.0.1080.1920/0.0.2560.1440/2560.296.1680.1050@0.0.2560.1440" timestamp="1598949555734" />
+    <state x="2929" y="435" width="1071" height="825" key="find.popup/-1080.0.1080.1920/0.0.2560.1440/2560.296.1680.1050@2560.296.1680.1050" timestamp="1598855307682" />
+    <state x="563" y="190" width="1631" height="957" key="find.popup/-1080.0.1080.1920/0.0.2560.1440/338.1440.1680.1050@0.0.2560.1440" timestamp="1596446998904" />
+    <state x="548" y="210" width="1588" height="942" key="find.popup/-1080.23.1080.1897/0.23.2491.1417/338.1463.1680.1027@0.23.2491.1417" timestamp="1597209441089" />
+    <state x="548" y="210" width="1588" height="942" key="find.popup/-1080.23.1080.1897/0.23.2491.1417@0.23.2491.1417" timestamp="1597330405185" />
+    <state x="563" y="199" width="1632" height="889" key="find.popup/-1080.23.1080.1897/0.23.2560.1337/2560.319.1680.1027@0.23.2560.1337" timestamp="1598322400608" />
+    <state x="885" y="324" width="887" height="1035" key="search.everywhere.popup" timestamp="1599136492829">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="885" y="324" width="887" height="1035" key="search.everywhere.popup/-1000.23.1000.1897/0.23.2560.1417/2560.319.1680.1027@0.23.2560.1417" timestamp="1599136492829" />
+    <state x="885" y="306" width="1277" height="1052" key="search.everywhere.popup/-1080.0.1080.1920/0.0.2560.1440/2560.296.1680.1050@0.0.2560.1440" timestamp="1599126325614" />
+    <state x="3141" y="519" width="838" height="767" key="search.everywhere.popup/-1080.0.1080.1920/0.0.2560.1440/2560.296.1680.1050@2560.296.1680.1050" timestamp="1598856270035" />
+    <state x="861" y="324" width="862" height="1033" key="search.everywhere.popup/-1080.0.1080.1920/0.0.2560.1440/338.1440.1680.1050@0.0.2560.1440" timestamp="1596445751945" />
+    <state x="861" y="324" width="840" height="1032" key="search.everywhere.popup/-1080.0.1080.1920/0.0.2560.1440@0.0.2560.1440" timestamp="1596687556954" />
+    <state x="861" y="324" width="862" height="1033" key="search.everywhere.popup/-1080.23.1080.1897/0.23.2491.1417/338.1463.1680.1027@0.23.2491.1417" timestamp="1597129735475" />
+    <state x="861" y="324" width="862" height="1033" key="search.everywhere.popup/-1080.23.1080.1897/0.23.2491.1417@0.23.2491.1417" timestamp="1597330261352" />
+    <state x="885" y="307" width="887" height="976" key="search.everywhere.popup/-1080.23.1080.1897/0.23.2560.1337/2560.319.1680.1027@0.23.2560.1337" timestamp="1598322839834" />
+    <state x="685" y="263" width="686" height="824" key="search.everywhere.popup/-1920.84.1920.1057/0.23.1982.1129/-3600.84.1680.1027@0.23.1982.1129" timestamp="1597378881419" />
+  </component>
+</project>

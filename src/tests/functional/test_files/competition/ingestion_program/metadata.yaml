@@ -1,0 +1,1 @@
+command: python3 /app/program/ingestion.py /app/input_data/ /app/output/ /app/program /app/ingested_program

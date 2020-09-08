@@ -1,0 +1,25 @@
+<h2>Evaluation</h2>
+<h3>Competition protocol</h3>
+<p>This challenge has <strong>three phases</strong>. The participants are provided with <strong>practice datasets</strong> which can be downloaded, so that they can develop their AutoWSL solutions offline. Then, the code will be uploaded to the platform and participants will receive immediate feedback on the performance of their method at another eighteen <strong>validation datasets</strong>. After <strong>feedback phase</strong> terminates, we will have another <strong>check phase</strong>, where participants are allowed to submit their code only once on <strong>private datasets</strong> in order to debug. Participants won't be able to read detailed logs but they are able to see whether their code report errors. Last, in the <strong>Final Phase</strong>, Participants&rsquo; solutions will be evaluated on eighteen <strong>test datasets</strong>. The ranking in the final phase will count towards determining the winners.</p>
+<p>Code submitted is trained and tested automatically, without any human intervention. Code submitted on <strong>feedback (resp. final) phase</strong> is run on all 18 feedback (resp. final) datasets in parallel on separate compute workers, each one with its own time budget.</p>
+<p>The identities of the datasets used for testing on the platform are concealed. The data are provided in a raw form (no feature extraction) to encourage researchers to performe automatic feature learning. All problems are binary classification problems. The tasks are constrained by the time budget (provided in the metafile of datasets).</p>
+<p>Here is some pseudo-code of the evaluation protocol:</p>
+<pre><code># For each dataset, our evaluation program calls the model constructor:
+
+from model import Model
+M = Model(metadata=dataset_metadata)
+
+with timer.time_limit('training'):
+    M.train(train_dataset, train_label)
+    M.save(temp_dir)
+
+M = Model(metadata=dataset_metadata)
+
+with timer.time_limit('predicting'):
+    M.load(temp_dir)
+    y_pred = M.predict(test_dataset)
+</code></pre>
+<p>It is the responsibility of the participants to make sure that neither the "train" nor the "test" methods exceed the time budget.</p>
+<h3>Metrics</h3>
+<p>For each dataset, we compute <strong>ROC AUC</strong> as the evaluation for this dataset. Participants will be ranked according to AUC per dataset. After we compute the AUC for all 18 datasets, the overall ranking is used as the final score for evaluation and will be used in the leaderboard. It is computed by averaging the ranks (among all participants) of AUC obtained on the 18 datasets.</p>
+<p class="p1">&nbsp;</p>

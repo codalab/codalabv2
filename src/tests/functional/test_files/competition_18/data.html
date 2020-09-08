@@ -1,0 +1,94 @@
+<h1>FAQs</h1>
+<p><a name="help"></a></p>
+<h3>Can organizers compete in the challenge?</h3>
+<p>No, they can make entries that show on the leaderboard for test purposes and to stimulate participation, but they are excluded from winning prizes.</p>
+<h3>Are there prerequisites to enter the challenge?</h3>
+<p>No, except accepting the TERMS AND CONDITIONS.</p>
+<h3>Can I enter any time?</h3>
+<p>No, you can join the challenge until one week before the end of feedback phase. After that, we will require real personal identification (notified by organizers) to avoid duplicate accounts.</p>
+<h3>Where can I download the data?</h3>
+<p>You can download "practice datasets" only from the Instructions page. The data on which your code is evaluated cannot be downloaded, it will be visible to your code only, on the Codalab platform.</p>
+<h3>How do I make submissions?</h3>
+<p>To make a valid challenge entry,&nbsp;click the blue button on the upper right side "Upload a Submission". This will ensure that you submit on all&nbsp; datasets of the challenge simultaneously. You may also make a submission on a single dataset for debug purposes, but it will not count towards the final ranking.</p>
+<h3>Do you provide tips on how to get started?</h3>
+<p>We provide a&nbsp;Starting Kit in Python with step-by-step instructions in "README.md".</p>
+<h3>Are there publication opportunities?</h3>
+<p>Yes. Top ranking participants will be invited to submit papers to a&nbsp;<a href="https://ccc.inaoep.mx/~hugojair/pmwiki/index.php?n=Main.SpecialIssueOnAutoMLAtTPAMI">special issue of the IEEE transaction journal PAMI on Automated Machine Learning</a>&nbsp;and will be entered in a contest for the best paper. Deadline March 15th 2020.</p>
+<p>There will be 2 best paper awards of $1000 ("best paper" and "best student paper").</p>
+<h3>Are there prizes?</h3>
+<p>Yes, a $4000 prize pool.</p>
+<table style="height: 86px; margin-left: auto; margin-right: auto; width: 521px;">
+<tbody>
+<tr>
+<td style="width: 123px;">&nbsp;</td>
+<td style="width: 123px;">1st place</td>
+<td style="width: 123px;">2nd place</td>
+<td style="width: 124px;">3rd place</td>
+</tr>
+<tr>
+<td style="width: 123px;">Prize</td>
+<td style="width: 123px;">$2000</td>
+<td style="width: 123px;">$1500</td>
+<td style="width: 124px;">$500</td>
+</tr>
+</tbody>
+</table>
+<h3>Do I need to submit code to participate?</h3>
+<p>Yes, participation is by code submission.</p>
+<h3>When I submit code, do I surrender all rights to that code to the SPONSORS or ORGANIZERS?</h3>
+<p>No. You just grant to the ORGANIZERS a license to use your code for evaluation purposes. You retain all other rights.</p>
+<h3>If I win, I must submit a fact sheet, do you have a template?</h3>
+<p>Yes, we will provide the fact sheet in a suitable time.<strong><br /></strong></p>
+<h3>What is your CPU/GPU computational configuration?</h3>
+<p>On our platform, for each submission, allocated computational resource is:</p>
+<ul>
+<li>CPU: 4 cores</li>
+<li>Memory: 16GB</li>
+<li>No GPU provided</li>
+</ul>
+<p>The PARTICIPANTS will be informed if the computational resources increase. They will NOT decrease.</p>
+<h3>Will there be a final test round on separate datasets?</h3>
+<p>YES. The ranking of participants will be made from a final blind test made by evaluating a SINGLE SUBMISSION made on the final test submission site. The submission will be evaluated on five new test datasets in a completely "blind testing" manner. The final test ranking will determine the winners.</p>
+<h3>What is my time budget?</h3>
+<p>Each execution must run in its own time budget for each dataset (provided in the metafile info.json time_budget and pred_time_budget for training and testing).</p>
+<h3>Does the time budget correspond to wall time or CPU time?</h3>
+<p>Wall time.</p>
+<h3>My submission seems stuck, how long will it run?</h3>
+<p>In principle no more than its time budget. We kill the process if the time budget is exceeded. Submissions are queued and run on a first time first serve basis. We are using several identical servers. Contact us if your submission is stuck for more than 24 hours. Check on the leaderboard the execution time.</p>
+<h3>How many submissions can I make?</h3>
+<p>5 times per day. This may be subject to change, according to the number of participants. Please respect other users.<strong>&nbsp;It is forbidden to register under multiple user IDs to gain an advantage and make more submissions. Violators will be DISQUALIFIED FROM THE CONTEST.</strong></p>
+<h3>Do my failed submissions count towards my number of submissions per day?</h3>
+<p>Yes. Please contact us if you think the failure is due to the platform rather than to your code and we will try to resolve the problem promptly.</p>
+<h3>What happens if I exceed my time budget?</h3>
+<p>This should be avoided. In the case where a submission exceeds the time budget for a particular task (dataset), the submission handling process (ingestion program in particular) will be killed when time budget is used up and the prediction made will be used for evaluation. In the other case where a submission exceeds the total compute time per day, all running tasks will be killed by CodaLab and the status will be marked 'Failed' and a score of -1.0 will be produced.</p>
+<h3>The time budget is too small, can you increase it?</h3>
+<p>No, sorry, not for this challenge.</p>
+<h3>What metric are you using?</h3>
+<p>ROC AUC is used per dataset. More info on evaluation can be found at "Get Started - Evaluation".</p>
+<h3>Which version of Python are you using?</h3>
+<p>The code was tested under Python 3.6.9. We are running Python 3.6.9 on the server and the same libraries are available.</p>
+<h3>Can I use something else than Python code?</h3>
+<p>Yes. Any Linux executable can run on the system, provided that it fulfills our Python interface and you bundle all necessary libraries with your submission.</p>
+<h3>Do I have to use TensorFlow?</h3>
+<p>No.&nbsp;</p>
+<h3>Which docker are you running on Codalab?</h3>
+<p>vergilgxw/autotable:v2.</p>
+<h3>How do I test my code in the same environment that you are using before submitting?</h3>
+<p>When you submit code to Codalab, your code is executed inside a Docker container. This environment can be exactly reproduced on your local machine by downloading the corresponding docker image.&nbsp;</p>
+<h3>What is meant by "Leaderboard modifying disallowed"?</h3>
+<p>Your last submission is shown automatically on the leaderboard. You cannot choose which submission to select. If you want another submission than the last one you submitted to "count" and be displayed on the leaderboard, you need to re-submit it.</p>
+<h3>Can I register multiple times?</h3>
+<p>No. If you accidentally register multiple times or have multiple accounts from members of the same team, please notify the ORGANIZERS.&nbsp;<strong>Teams or solo PARTICIPANTS with multiple accounts will be disqualified.</strong></p>
+<h3>How can I create a team?</h3>
+<p>We have disabled Codalab team registration. To join as a team, just share one account with your team. The team leader is responsible for making submissions and observing the rules.</p>
+<h3>How can I destroy a team?</h3>
+<p>You cannot. If you need to destroy your team, contact us.</p>
+<h3>Can I join or leave a team?</h3>
+<p>It is up to you and the team leader to make arrangements. However, you cannot participate in multiple teams.</p>
+<h3>Can I cheat by trying to manipulate training/test in save/load functions?</h3>
+<p>No. Please note that you can only train/predict in the train/predict methods. save/load methods are reserved for saving/loading models only. If we discover that you are trying to cheat in this way you will be disqualified. All your actions are logged and your code will be examined if you win.</p>
+<h3>Can I give an arbitrary hard time to the ORGANIZERS?</h3>
+<p>ALL INFORMATION, SOFTWARE, DOCUMENTATION, AND DATA ARE PROVIDED "AS-IS". UPSUD, CHALEARN, IDF, AND/OR OTHER ORGANIZERS AND SPONSORS DISCLAIM ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR ANY PARTICULAR PURPOSE, AND THE WARRANTY OF NON-INFRIGEMENT OF ANY THIRD PARTY'S INTELLECTUAL PROPERTY RIGHTS. IN NO EVENT SHALL ISABELLE GUYON AND/OR OTHER ORGANIZERS BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF SOFTWARE, DOCUMENTS, MATERIALS, PUBLICATIONS, OR INFORMATION MADE AVAILABLE FOR THE CHALLENGE. In case of dispute or possible exclusion/disqualification from the competition, the PARTICIPANTS agree not to take immediate legal action against the ORGANIZERS or SPONSORS. Decisions can be appealed by submitting a letter to the CHALEARN president, and disputes will be resolved by the CHALEARN board of directors. See&nbsp;<a href="http://www.chalearn.org/contact-us.html">contact information.</a></p>
+<h3>Where can I get additional help?</h3>
+<p>For questions of general interest, THE PARTICIPANTS should post their questions to the forum.</p>
+<p>Other questions should be directed to&nbsp;<a href="mailto:autowsl2019@4paradigm.com">the organizers</a>.</p>

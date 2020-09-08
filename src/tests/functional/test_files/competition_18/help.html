@@ -1,0 +1,43 @@
+<h2>Dataset</h2>
+<div>This page describes the datasets used in AutoWSL challenge. 39 datasets are prepared for this competition. <strong>3&nbsp;practice datasets</strong>, which can be downloaded, are provided to the participants so that they can develop their AutoWSL solutions offline. Besides that, another<strong> 18 validation datasets</strong> are also provided to participants to evaluate the public leaderboard scores of their AutoWSL solutions. Afterward, their solutions will be evaluated with <strong>18 test datasets</strong> without human intervention.&nbsp;</div>
+<div>&nbsp;</div>
+<h3>Description</h3>
+<div>This challenge is restricted to binary classification problems, which come from different application domains. we will focus on three popular tasks in WSL, i.e., semi-supervised learning (some samples are unlabeled), positive unlabeled learning (samples are only positive or unlabeled, no negative samples), and learning from noisy labels (all samples are labeled, but some labels can be wrong). These are three disjoint tasks, and they will not simultaneously appear in a single data set.</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<h3>Data</h3>
+<h4>Components</h4>
+<div>Each dataset is split into two subsets, namely the training set and the testing set.</div>
+<p>Both sets have:<br /> &bull; a main data file that stores the main table (label excluded);<br /> &bull; an info dictionary that contains important information about the dataset, including feature type;<br /> &bull; The training set has an additional label file that stores labels associated with the training data.</p>
+<h4>Table files</h4>
+<p>Each table file is a CSV file that stores a table (main or related), with '\t' as the delimiter. The first row indicates the names of features, and the following rows are the records.<br /> The type of each feature can be found in the info dictionary that will be introduced soon. <br /> There are 4 types of features, indicated by "cat", "num", "multi-cat", and "time", respectively:<br /> &bull; cat: categorical feature, an integer<br /> &bull; num: numerical Feature, a real value.<br /> &bull; multi-cat: multi-value categorical Feature: a set of integers, split by the comma. The size of the set is not fixed and can be different for each instance. For example, topics of an article, words in a title, items bought by a user and so on.<br /> &bull; time: time feature, an integer that indicates the timestamp.<br /> Note: Categorical/Multi-value Categorical features with a large number of values that follows a power law might be included.</p>
+<h4>Label file</h4>
+<p>The label file is associated only with the main table in the training set. It is a CSV document that contains exactly one column, with the first row as the header and the remaining indicating labels of corresponding instances in the main table. We use 1, 0, and -1 to indicate positive, unlabeled, and negative examples respectively.</p>
+<h4>Info dictionary</h4>
+<p>Important information about each dataset is stored in a python dictionary structure named as info.json, which acts as an input of the participants' AutoML solutions. For public datasets, we will provide an info.json file that contains the dictionary. Here we give details about info.<br /> &bull; task <span class="token punctuation">:</span>&nbsp;'pu' or 'ssl' or 'noisy'. (representing positive and unlabeled learning, semi-supervised learning and noisy label task)<br /> &bull; time_budget <span class="token punctuation">:</span> the time budget of the dataset.<br /> &bull; start_time<span class="token punctuation">:</span> DEPRECATED.<br /> &bull; schema <span class="token punctuation">:</span> a dictionary that stores information about table. Each key indicatesthe name of feature, and its corresponding value is a dictionary that indicates the type of each column in this table.</p>
+<ul>
+<li>
+<p>Example:</p>
+<pre class="language-json" data-role="codeBlock" data-info="json"><span class="token punctuation">{</span>
+  <span class="token property">"task"</span><span class="token operator">:</span> <span class="token number">"pu"</span><span class="token punctuation">,</span>
+  <span class="token property">"time_budget"</span><span class="token operator">:</span> <span class="mi">500</span><span class="token punctuation">,</span>
+  <span class="token property">"start_time"</span><span class="token operator">:</span> <span class="token number">10550933</span><span class="token punctuation">,</span>
+  <span class="token property">"schema"</span><span class="token operator">:</span> <span class="mi"><span class="token punctuation">{</span>
+  <span class="token property">"c_1"</span><span class="token operator">:</span> <span class="token number">"cat"</span><span class="token punctuation">,</span>
+  <span class="token property">"n_1"</span><span class="token operator">:</span> <span class="token number">"num"</span><span class="token punctuation">,</span>
+  <span class="token property">"t_1"</span><span class="token operator">:</span> <span class="token number">"time"</span>
+  <span class="token punctuation">}</span>
+</span>
+<span class="token punctuation">}</span></pre>
+</li>
+</ul>
+<div>&nbsp;</div>
+<div>
+<h3>Dataset Credits</h3>
+We thank the following recourses for providing us with excellent datasets:</div>
+<ul>
+<li>Dua, D. and Graff, C. (2019). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.</li>
+</ul>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>

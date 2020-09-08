@@ -1,0 +1,58 @@
+version: 2
+title: Classify Wheat Seeds
+description: Classification of wheat seeds into three classes based on seven dimensions of data
+image: wheat.jpg
+
+terms: terms.md
+pages:
+  - title: Participation
+    file: participate.md
+
+tasks:
+  - index: 0
+    name: Wheat Seed Developement Task
+    input_data: dev_phase/input_data/
+    reference_data: dev_phase/reference_data/
+    ingestion_program: ingestion_program/
+    scoring_program: scoring_program/
+  - index: 1
+    name: Wheat Seed Final Task
+    input_data: final_phase/input_data/
+    reference_data: final_phase/reference_data/
+    ingestion_program: ingestion_program/
+    scoring_program: scoring_program/
+
+solutions:
+  - index: 0
+    tasks:
+    - 0
+    - 1
+    path: solution.zip
+
+
+phases:
+  - name: Development Phase
+    description: 'Development phase: tune your models and submit prediction results, trained model, or untrained model.'
+    start: 8-7-2019
+    end: 9-30-2019
+    tasks:
+      - 0
+  - name: Testing Phase
+    description: 'Final Phase: test against unseen data'
+    start: 10-1-2019
+    end: 12-31-2019
+    tasks:
+      - 1
+
+leaderboards:
+  - title: Results
+    key: main
+    columns:
+      - title: Prediction score
+        key: accuracy
+        index: 0
+        sorting: desc
+      - title: Duration
+        key: duration
+        index: 1
+        sorting: desc

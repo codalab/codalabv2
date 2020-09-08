@@ -1,0 +1,67 @@
+title: 'AutoWSL Challenge :: Feedback Phase'
+description: Create a fully Automated Deep Learning solution for Text Categorization.
+competition_docker_image: vergilgxw/autotable:v2
+image: logo.png
+has_registration: false
+html:
+  credits: credits.html
+  data: data.html
+  evaluation: evaluation.html
+  help: help.html
+  overview: overview.html
+  terms: terms.html
+phases:
+  0:
+    color: orange
+    input_data: input_data_1.zip
+    is_parallel_parent: true
+    is_scoring_only: true
+    label: Feedback Phase
+    max_submissions: 150
+    max_submissions_per_day: 5
+    phasenumber: 1
+    reference_data: reference_data_1.zip
+    scoring_program: scoring_program_1/
+    start_date: 2019-09-24 17:00:00+00:00
+  1:
+    color: green
+    ingestion_program: ingestion_program_2/
+    input_data: input_data_2.zip
+    label: Dataset 1
+    max_submissions: 150
+    max_submissions_per_day: 5
+    parent_phasenumber: 1
+    phasenumber: 2
+    reference_data: reference_data_2.zip
+    scoring_program: scoring_program_2/
+    start_date: 2019-09-24 17:00:00+00:00
+  2:
+    color: green
+    ingestion_program: ingestion_program_2/
+    input_data: input_data_3.zip
+    label: Dataset 2
+    max_submissions: 150
+    max_submissions_per_day: 5
+    parent_phasenumber: 1
+    phasenumber: 3
+    reference_data: reference_data_3.zip
+    scoring_program: scoring_program_2/
+    start_date: 2019-09-24 17:00:00+00:00
+admin_names: guyon,Zhen,Zhengying,tuweiwei,WenhaoLi,liushouxiang,zhhwss,Yuanfei,vgxx,wahaha,
+end_date: 2019-10-29 15:59:59+00:00
+leaderboard:
+  leaderboards:
+      Results: &RESULTS
+          label: RESULTS
+          rank: 1
+  columns:
+      score:
+          label: Score
+          leaderboard: *RESULTS
+          rank: 1
+          sort: desc
+      Duration:
+          leaderboard: *RESULTS
+          label: Duration
+          rank: 2
+          sort: desc
